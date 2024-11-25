@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First page</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function submit() {
+        var name = document.getElementById("name").value;
+        let a = [];
+
+        if (name.trim() === "") {
+          alert("Please enter a name");
+        } else {
+          // Retrieve the array from localStorage and parse it
+          a = JSON.parse(localStorage.getItem("names") || "[]");
+
+          // Add the new name to the array
+          a.push(name);
+
+          // Save the updated array back to localStorage
+          localStorage.setItem("names", JSON.stringify(a));
+
+          // Optionally, clear the input field
+          document.getElementById("name").value = "";
+
+          displayNames();
+        }
+
+        function displayNames() {
+          // Retrieve the array from localStorage and parse it
+          let names = JSON.parse(localStorage.getItem("names") || "[]");
+
+          // Get the table body element
+          let tbody = document.getElementById("tableBody");
+
+          // Clear existing rows
+          //tbody.innerHTML = "";
+
+          // Append rows for each name using map
+          tbody.innerHTML = names
+            .map((name) => `<tr><td>${name}</td></tr>`)
+            .join("");
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", displayNames);
+    </script>
+    <input id="name" placeholder="Enter your name" type="text" />
+    <button onclick="submit()">Submit</button>
+    <table id="namesTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </body>
+</html>

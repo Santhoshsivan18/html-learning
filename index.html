@@ -1,0 +1,256 @@
+<!-- upload html file to this to check for errors and warnings https://validator.w3.org/#validate_by_upload -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Sandy" />
+    <meta name="description" content="Hello" />
+    <title>My first page</title>
+    <!-- relative reference in next line for href-->
+    <link rel="icon" href="html5-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>header</h1>
+      <section id="top">
+        <hr />
+        <h1>Top</h1>
+        <h1>h1Hello World!</h1>
+        <hr />
+      </section>
+      <p>
+        <em><strong> this is a page </strong></em>
+      </p>
+    </header>
+
+    <nav aria-label="primary-nav">
+      <ol>
+        <li><a href="#top">Goto top</a></li>
+        <li><a href="#middle">Goto middle</a></li>
+        <li><a href="#bottom">Goto bottom</a></li>
+      </ol>
+    </nav>
+
+    <li>
+        <a href="#contact">Contact us</a>
+    </li>
+
+    <h2>h2Hello World!</h2>
+    <p>This is a page&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;elai</p>
+
+    <ol>
+      <!-- <ul>  -->
+      <p><li>hello</li></p>
+      <p><li>hell</li></p>
+      <li>hel</li>
+      <li>he</li>
+    </ol>
+
+    <!-- can also use article instead of section use article/section for good practice -->
+    <section id="middle">
+      <hr />
+      <h1>Middle</h1>
+      <dl>
+        <p><dt>description tag</dt></p>
+        <p><dd>description data</dd></p>
+        <dt>heading</dt>
+        <dd>content</dd>
+        <dt>yt channel</dt>
+        <dd>
+          <!--absolute reference-->
+          <!-- <a href="URL">
+                Possible values:
+                1)An absolute URL - points to another web site (like href="http://www.example.com/default.htm")
+                2)A relative URL - points to a file within a web site (like href="default.htm")
+                3)Link to an element with a specified id within the page (like href="#section2")
+                4)Other protocols (like https://, ftp://, mailto:, file:, etc..)
+                5)A script (like href="javascript:alert('Hello');") -->
+          <a href="https://www.youtube.com/@Balachandra_in/videos">Balachandra_in</a>
+        </dd>
+      </dl>
+      <hr />
+    </section>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;helllloooo</p>
+
+    <p><a href="samplepage.html">About me sample</a></p>
+
+    <h1>Hello</h1>
+    <code>&lt;h1&gt;Hello&lt;/h1&gt;</code>
+    <figure>
+      <img
+        src="img/s1.JPG"
+        alt="a pic"
+        title="added pic"
+        width="300"
+        height="300"
+        loading="eager"
+      />
+      <figcaption>sandy in coat</figcaption>
+    </figure>
+
+    <br />
+    <section>
+      <article>
+        <table>
+            <caption>table</caption>
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th scope="col">Time</th>
+                <th scope="col">Work</th>
+            </tr>
+            </thead>
+          <tr>
+                <th scope="row">row1</th>
+              <td headers="time"><time datetime="08:00">8am</time>-<time datetime="11:00"
+                >11am</time
+              >
+            </td>
+            <td>table data</td>
+          </tr>
+          <tr>
+            <td rowspan="2">
+              <time datetime="11:00">11am</time>-<time datetime="12:00"
+                >12pm</time
+              >
+            </td>
+            <td>table data1</td>
+            <tr><td>table data2</td></tr>
+          </tr>
+        </table>
+      </article>
+    </section>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <!-- lazy loading dynamically downloads pics and reduces load -->
+    <img
+      src="img/s2.JPG"
+      alt="a pic"
+      title="added pic"
+      width="300"
+      height="300"
+      loading="lazy"
+    />
+    <p>sandy in coat</p>
+    <!-- study cumulative layout shift -->
+
+    <h3>h3Hello World!</h3>
+    <p>
+      i learn from
+      <abbr title="Mozilla Developer Network"
+        ><a href="https://developer.mozilla.org/">MDN</a></abbr
+      >
+      networks<br />nnnthnn page
+    </p>
+    <!--comments-->
+    <section id="bottom">
+      <hr />
+      <h1>Bottom</h1>
+      <address>Erode</address>
+      <!-- '&' pota commands are called entity -->
+      <p>&lt; &lt; &copy; certified &copy; &gt; &gt;</p>
+      <hr />
+    </section>
+    <article id="contact">
+      <h2>contact details</h2>
+      <p>tell something</p>
+        <form action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal info</legend>
+          <p>
+          <label for="firstName">Firstname:</label>
+          <!-- the 'for' name in label tag should match with the 'id' in input tag -->
+          <input type="text" name="firstName" id="firstName" placeholder="firstname" autocomplete="on" required>
+        </p>
+
+      <p>
+          <label for="lastName">Lastname:</label>
+          <input type="text" name="lastName" id="lastName" placeholder="lastname" autocomplete="on" required>
+        </p>
+
+      <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="password" required>
+        </p>
+
+      <p>
+          <label for="phone">Phone No:</label>
+          <input type="tel" name="phone" id="phone" placeholder="ur num" required pattern="+91[0-9]{10}">
+        </p>
+
+      <p>
+          <label for="Decade">Fav decade No:</label>
+          <input type="number" name="Decade" id="Decade" min="1950" max="2024" value="1980" step="10">
+        </p>
+
+        <p>
+          <label for="content">Fav content:</label>
+          <select name="content" id="content" multiple>
+            <optgroup label="Domain">
+              <option value="AI">AI</option>
+              <option value="ML" selected>ML</option>
+            </optgroup>
+        <optgroup label="Fullstack">
+            <option value="Front">Frontend</option>
+            <option value="Back">Backend</option>
+          </optgroup>
+          </select>
+        </p>
+
+        <p>
+          <label for="content">Fav content:</label>
+          <input type="text" name="content" id="content" list="content-list">
+          <datalist id="content-list">
+            <option value="Frontend">
+            <option value="Backend">
+            <option value="AI">
+            <option value="ML">
+          </datalist>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Food</legend>
+        <legend>Radio button</legend>
+      <p>
+      <input type="radio" name="food" id="chicken" value="chicken">
+      <label for="chicken">Chicken</label>
+      </p>
+      <p>
+      <input type="radio" name="food" id="Mutton" value="Mutton">
+      <label for="Mutton">Mutton</label>
+      </p>
+
+      <legend>Checkbox button</legend>
+      <p>
+        <input type="checkbox" name="food" id="Chicken" value="Chicken">
+        <label for="Chicken">Chicken</label>
+      </p>
+      <p>
+        <input type="checkbox" name="food" id="Mutton" value="Mutton">
+        <label for="Mutton">Mutton</label>
+      </p>
+      </fieldset>
+      <fieldset>
+        <legend>Send me a note</legend>
+        <label for="msg">Tell me somthing</label>
+        <p>
+          <textarea name="msg" id="msg" cols="30" rows="10" placeholder="type msg here"></textarea>
+        </p>
+      </fieldset>
+      <fieldset>
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+        <button type="submit" formaction="https://httpbin.org/get" formmethod="get">Get</button>
+        <button type="reset">Reset</button>
+      </fieldset>
+        </form>
+    </article>
+    <footer>
+      <hr />
+      <p><a href="#">Back to top</a></p>
+    </footer>
+  </body>
+</html>
